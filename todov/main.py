@@ -38,7 +38,7 @@ class UserSchema(BaseModel):
         orm_mode=True   # it will help to convert the dictionary data in json format 
 
 class UserCreateSchema(UserSchema):
-    password:str
+    password:str # why we are writing because in post method the password will create and password will require schema to create 
 #Get method
 
 @app.get("/users",response_model=List[UserSchema])
